@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EGParadise</title>
+		<link rel="icon" href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/egyptian-eye-of-horus-ankh-egypt-archaeologist-gold-noirty-designs.jpg"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "font/fonts.css">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "css/normalize.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "css/utility.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
+		<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    <log class="EG">EG</log><span>Paradise</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "index.html" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "gallery.html" class = "nav-link">National Gallery</a>
+                        </li>
+						<li class = "nav-item">
+                            <a href = "Booking.html" class = "nav-link">Booking</a>
+                        </li>
+						
+                        <li class = "nav-item">
+                            <a href = "about.html" class = "nav-link">About Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "contact.html" class = "nav-link">Contact Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "Sign_in.html" class = "nav-link">Sign In</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "Sign_up.html" class = "nav-link">Sign Up</a>
+                        </li>
+						
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>Booking</h1>
+                    <p>Don't Miss This chance</p>
+                    
+                </div>
+                
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- blog section -->
+	<div class="containerB">
+	
+      <form>
+	  
+		<div class="col-50">
+		<h2>Ticket reservation form</h2>
+
+		</div>
+		
+        <div class="input-group">
+            <label for="username"><i class="fa fa-user"></i> User name</label>
+            <input type="text" placeholder="mahmoudAbdelgelel" id="user-name" onkeyup="validateUserName()"/><br><br>
+            <span id="username-error"></span>
+            </div>
+    
+    
+        
+        
+        
+        <div class="input-group">
+        <label for="passwordText"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="passwordText-number" name="passwordText" placeholder="*************" maxlength="12" onkeyup="validatePasswordText()"/>
+        <span id="passwordText-error"></span>
+        </div>
+
+			<div class="input-group">
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+			<input type="text" placeholder="Mahmoud Abdalgelel" id="contact-name" onkeyup="validateName()"/><br><br>
+            <span id="name-error"></span>
+			</div>
+			
+			<div class="input-group">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+			<input type="email" placeholder="john@example.com" id="contact-email" onkeyup="validateEmail()"/><br><br>
+            <span id="email-error"></span>
+			</div>
+			
+			<div class="input-group">
+            <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+            <input type="tel" placeholder="01xx xxx xxxx" id="contact-phone" onkeyup="validatePhone()"/><br><br>
+            <span id="phone-error"></span>
+            </div>
+		
+		<div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-containerB">
+              <i class="fab fa-cc-visa" style="color:navy;"></i>
+              <i class="fab fa-cc-amex" style="color:blue;"></i>
+              <i class="fab fa-cc-mastercard" style="color:red;"></i>
+              <i class="fab fa-cc-discover" style="color:orange;"></i>
+            </div>
+		    </div>
+			
+			<div class="input-group">
+            <label for="cname">Name on Card</label>
+            <input type="text" placeholder="Mahmoud Ahmed Mahmoud" id="name-card" onkeyup="validateNameCard()"/><br><br>
+            <span id="ncard-error"></span>
+			</div>
+			
+			<div class="input-group">
+            <label for="ccnum">Credit card number</label>
+			<input  type="tel" placeholder="xxxx xxxx xxxx xxxx" maxlength="19" id="card-number" onkeyup="validateCardNum()"/><br><br>
+            <span id="ccnum-error"></span>
+			</div>
+			
+			<div class="input-group">
+            <label for="date">Valid thru</label>
+            <input type="text" placeholder="MM/YY" id="valid-thru" onkeyup="validateValidThru()"/><br><br>
+			<span id="valid-error"></span>
+			</div>
+			
+			<div class="input-group">
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv-number" name="cvv" placeholder="xxx" maxlength="3" onkeyup="validateCVV()"/>
+			<span id="cvv-error"></span>
+            </div>
+		   
+		   
+		   <label><br>
+			<input type="checkbox" checked="checked" name="sameadr"> Do you want to save the data?
+           </label>
+			<button onclick="return validateForm()">Pay <i class = 'fa fa-money-check'></i></button><br><br>
+            <span id="submit-error"></span>
+			
+	 </form>
+	 
+	 </div>
+	 <br>
+        <!-- end of blog section -->
+		
+		<footer class = "py-4">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <a href = "index.html" class = "site-brand">
+                        EG<span>Paradise</span>
+                    </a>
+                    <p class = "text">Giving you the chance to discover the truth of the world.</p>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "https://www.facebook.com/Paradise-Trip-101886412294585">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "https://www.instagram.com/paradisegypt/">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "https://twitter.com/perfectegypt_">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "https://www.pinterest.com/pin/457115430936221179/">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Popular Places:</h2>
+                    <ul>
+                        <li>
+                            <a href = "https://www.amphorashotels.com/amphoras-blu?gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_IGWjBtnQKK327yj_AXByoGKVuXa4ZQ5aVKaCL9UU0t1h3o67MxV3QaAmo8EALw_wcB" target="_parent">
+                                Sharm El-Shaikh
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href = "https://www.deluxetoursegypt.com/tour-destination/luxor/" target="_parent">
+                                Luxor
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href = "https://www.deluxetoursegypt.com/alexandria-travel-guide/" target="_parent">
+                                Alexandria
+                            </a>
+                        </li>
+
+						<li>
+                            <a href = "https://www.deluxetoursegypt.com/cairo-travel-guide/" target="_parent">
+                                Cairo
+                            </a>
+                        </li>
+
+						<li>
+                            <a href = "https://www.deluxetoursegypt.com/tour-destination/aswan/" target="_parent">
+                                Aswan
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "subscribe-form footer-item">
+                    <h2>Subscribe for Newsletter!</h2>
+                    <form class = "flex">
+                        <!--<input type = "email" placeholder="Enter Email" class = "form-control">-->
+                        <a class="btn" href="mailto:hhasanelbadry@student.eelu.edu.eg?subject=Congratulation for successfully subscribe &body=Successfully subscribed. Wait for more new tourist offers/* If you need to ask for details feel free to text it */ &cc=omohamadfathy@student.eelu.edu.eg , mabdelglel@student.eelu.edu.eg ">Subscribe</a>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+		
+        
+        <!-- js -->
+		<script src="js/booking.js"></script>
+        <script src = "js/script.js"></script>
+    </body>
+</html>
